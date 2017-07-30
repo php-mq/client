@@ -5,8 +5,8 @@
 
 namespace PHPMQ\Client\Types;
 
-use PHPMQ\Client\Interfaces\IdentifiesMessage;
 use PHPMQ\Client\Traits\StringRepresenting;
+use PHPMQ\Protocol\Interfaces\IdentifiesMessage;
 
 /**
  * Class MessageId
@@ -27,5 +27,10 @@ final class MessageId implements IdentifiesMessage
 	public function toString() : string
 	{
 		return $this->messageId;
+	}
+
+	public function equals( IdentifiesMessage $other ) : bool
+	{
+		return ($other->toString() === $this->toString());
 	}
 }

@@ -5,8 +5,8 @@
 
 namespace PHPMQ\Client\Types;
 
-use PHPMQ\Client\Interfaces\IdentifiesQueue;
 use PHPMQ\Client\Traits\StringRepresenting;
+use PHPMQ\Protocol\Interfaces\IdentifiesQueue;
 
 /**
  * Class QueueName

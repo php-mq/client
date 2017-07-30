@@ -4,8 +4,81 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "24fc376078cbb1d4ffabd92b3d5dc1cd",
-    "packages": [],
+    "content-hash": "545732881c8438e1d781465624659921",
+    "packages": [
+        {
+            "name": "php-mq/protocol",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-mq/protocol.git",
+                "reference": "cbfe71543bb0f17d44a8c621bc9f412f35b65f2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-mq/protocol/zipball/cbfe71543bb0f17d44a8c621bc9f412f35b65f2b",
+                "reference": "cbfe71543bb0f17d44a8c621bc9f412f35b65f2b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "roave/security-advisories": "dev-master",
+                "tm/tooly-composer-script": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "tools": {
+                    "phpunit": {
+                        "url": "https://phar.phpunit.de/phpunit-6.2.3.phar",
+                        "only-dev": true
+                    },
+                    "coveralls": {
+                        "url": "https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar",
+                        "only-dev": true
+                    },
+                    "phpmetrics": {
+                        "url": "https://github.com/phpmetrics/PhpMetrics/releases/download/v2.2.0/phpmetrics.phar",
+                        "only-dev": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PHPMQ\\Protocol\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "PHPMQ\\Protocol\\Tests\\": "tests/"
+                }
+            },
+            "scripts": {
+                "post-install-cmd": [
+                    "Tooly\\ScriptHandler::installPharTools"
+                ],
+                "post-update-cmd": [
+                    "Tooly\\ScriptHandler::installPharTools"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Holger Woltersdorf",
+                    "email": "hw@hollo.me"
+                }
+            ],
+            "description": "The PHPMQ message protocol",
+            "support": {
+                "source": "https://github.com/php-mq/protocol/tree/master",
+                "issues": "https://github.com/php-mq/protocol/issues"
+            },
+            "time": "2017-07-29 22:11:08"
+        }
+    ],
     "packages-dev": [
         {
             "name": "roave/security-advisories",
@@ -13,12 +86,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "fa53c38b02d1ec883f4ea2b2c05492da0c7611cf"
+                "reference": "626c97bd5b45a08db902a0fb0b13f58f3785b439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/fa53c38b02d1ec883f4ea2b2c05492da0c7611cf",
-                "reference": "fa53c38b02d1ec883f4ea2b2c05492da0c7611cf",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/626c97bd5b45a08db902a0fb0b13f58f3785b439",
+                "reference": "626c97bd5b45a08db902a0fb0b13f58f3785b439",
                 "shasum": ""
             },
             "conflict": {
@@ -64,7 +137,7 @@
                 "onelogin/php-saml": "<2.10.4",
                 "oro/crm": ">=1.7,<1.7.4",
                 "oro/platform": ">=1.7,<1.7.4",
-                "phpmailer/phpmailer": ">=5,<5.2.22",
+                "phpmailer/phpmailer": ">=5,<5.2.24",
                 "pusher/pusher-php-server": "<2.2.1",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
                 "shopware/shopware": "<4.4|>=5,<5.2.16",
@@ -142,7 +215,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2017-07-18T08:09:10+00:00"
+            "time": "2017-07-28T07:54:11+00:00"
         },
         {
             "name": "tm/tooly-composer-script",
@@ -227,6 +300,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "php-mq/protocol": 20,
         "roave/security-advisories": 20
     },
     "prefer-stable": true,

@@ -3,13 +3,13 @@
  * @author hollodotme
  */
 
-namespace PHPMQ\Client\Protocol\Exceptions;
+namespace PHPMQ\Client\Builders\Exceptions;
 
 use PHPMQ\Client\Exceptions\LogicException;
 
 /**
  * Class PacketCountMismatchException
- * @package PHPMQ\Client\Protocol\Exceptions
+ * @package PHPMQ\Client\Builders\Exceptions
  */
 final class PacketCountMismatchException extends LogicException
 {

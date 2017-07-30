@@ -12,10 +12,12 @@ branches:
     - /^issue\/.+$/
 
 before_script:
+ - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git checkout "$TRAVIS_BRANCH"; else git checkout -b "$TRAVIS_PULL_REQUEST_BRANCH"; fi
+ - git reset --hard "$TRAVIS_COMMIT"
  - composer self-update
  - mkdir -p vendor/bin
+ - mkdir -p build/logs
  - composer install -o --prefer-dist --no-interaction
- - mkdir build/logs
 
 script:
  - php vendor/bin/phpunit.phar -c build/

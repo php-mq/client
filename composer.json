@@ -1,6 +1,6 @@
 {
 	"name": "php-mq/client",
-	"description": "Client",
+	"description": "PHPMQ Client",
 	"minimum-stability": "dev",
 	"prefer-stable": true,
 	"license": "MIT",
@@ -11,7 +11,14 @@
 		}
 	],
 	"require": {
-		"php": ">=7.1"
+		"php": ">=7.1",
+		"php-mq/protocol": "dev-master"
+	},
+	"repositories": {
+		"php-mq/protocol": {
+			"type": "vcs",
+			"url": "https://github.com/php-mq/protocol.git"
+		}
 	},
 	"autoload": {
 		"psr-4": {
