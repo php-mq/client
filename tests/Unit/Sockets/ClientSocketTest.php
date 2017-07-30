@@ -5,11 +5,11 @@
 
 namespace PHPMQ\Client\Tests\Unit\Sockets;
 
-use PHPMQ\Client\Interfaces\TransfersData;
 use PHPMQ\Client\Sockets\ClientSocket;
 use PHPMQ\Client\Sockets\Interfaces\IdentifiesSocketAddress;
 use PHPMQ\Client\Sockets\Types\NetworkSocket;
 use PHPMQ\Client\Tests\Unit\Fixtures\Traits\SocketMocking;
+use PHPMQ\Stream\Interfaces\TransfersData;
 use PHPUnit\Framework\TestCase;
 
 /**
