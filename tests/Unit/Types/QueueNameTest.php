@@ -30,5 +30,6 @@ final class QueueNameTest extends TestCase
 
 		$this->assertSame( 'Unit-Test-Queue', (string)$queue );
 		$this->assertSame( 'Unit-Test-Queue', $queue->toString() );
+		$this->assertSame( '"Unit-Test-Queue"', json_encode( $queue ) );
 	}
 }
