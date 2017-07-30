@@ -5,11 +5,11 @@
 
 namespace PHPMQ\Client\Sockets\Interfaces;
 
-use PHPMQ\Client\Interfaces\TransfersData;
+use PHPMQ\Stream\Interfaces\TransfersData;
 
 /**
  * Class ClientSocket
- * @package PHPMQ\Client\Endpoint\Sockets
+ * @package PHPMQ\Client\Sockets\Interfaces
  */
 interface EstablishesStream
 {

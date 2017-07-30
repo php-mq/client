@@ -12,12 +12,17 @@
 	],
 	"require": {
 		"php": ">=7.1",
-		"php-mq/protocol": "dev-master"
+		"php-mq/protocol": "dev-master",
+		"php-mq/stream": "dev-master"
 	},
 	"repositories": {
 		"php-mq/protocol": {
 			"type": "vcs",
 			"url": "https://github.com/php-mq/protocol.git"
+		},
+		"php-mq/stream": {
+			"type": "vcs",
+			"url": "https://github.com/php-mq/stream.git"
 		}
 	},
 	"autoload": {
