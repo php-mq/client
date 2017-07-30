@@ -6,10 +6,10 @@
 namespace PHPMQ\Client\Sockets;
 
 use PHPMQ\Client\Exceptions\RuntimeException;
-use PHPMQ\Client\Interfaces\TransfersData;
 use PHPMQ\Client\Sockets\Interfaces\EstablishesStream;
 use PHPMQ\Client\Sockets\Interfaces\IdentifiesSocketAddress;
-use PHPMQ\Client\Streams\Stream;
+use PHPMQ\Stream\Interfaces\TransfersData;
+use PHPMQ\Stream\Stream;
 
 /**
  * Class ClientSocket

@@ -6,10 +6,10 @@
 namespace PHPMQ\Client;
 
 use PHPMQ\Client\Sockets\Interfaces\EstablishesStream;
-use PHPMQ\Client\Streams\Constants\ChunkSize;
 use PHPMQ\Protocol\Interfaces\IdentifiesQueue;
 use PHPMQ\Protocol\Interfaces\ProvidesMessageData;
 use PHPMQ\Protocol\Messages\MessageClientToServer;
+use PHPMQ\Stream\Constants\ChunkSize;
 
 /**
  * Class Client
