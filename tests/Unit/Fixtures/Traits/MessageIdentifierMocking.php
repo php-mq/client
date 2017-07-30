@@ -5,8 +5,8 @@
 
 namespace PHPMQ\Client\Tests\Unit\Fixtures\Traits;
 
-use PHPMQ\Client\Interfaces\IdentifiesMessage;
 use PHPMQ\Client\Traits\StringRepresenting;
+use PHPMQ\Protocol\Interfaces\IdentifiesMessage;
 
 /**
  * Trait MessageIdentifierMocking
@@ -31,6 +31,11 @@ trait MessageIdentifierMocking
 			public function toString() : string
 			{
 				return $this->messageId;
+			}
+
+			public function equals( IdentifiesMessage $other ) : bool
+			{
+				return ($other->toString() === $this->toString());
 			}
 		};
 	}

@@ -5,8 +5,8 @@
 
 namespace PHPMQ\Client\Tests\Unit\Fixtures\Traits;
 
-use PHPMQ\Client\Interfaces\IdentifiesQueue;
 use PHPMQ\Client\Traits\StringRepresenting;
+use PHPMQ\Protocol\Interfaces\IdentifiesQueue;
 
 /**
  * Trait QueueIdentifierMocking
