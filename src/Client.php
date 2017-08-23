@@ -82,6 +82,8 @@ final class Client
 
 		$this->handlingStarted = true;
 
+		declare(ticks=1);
+
 		while ( $this->handlingStarted )
 		{
 			$messages = $this->readMessages();
