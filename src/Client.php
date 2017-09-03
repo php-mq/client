@@ -96,14 +96,14 @@ final class Client
 	{
 		if ( function_exists( 'pcntl_signal' ) )
 		{
-			pcntl_signal( SIGTERM, [$this, 'shutDownBySignal'] );
-			pcntl_signal( SIGINT, [$this, 'shutDownBySignal'] );
+			pcntl_signal( SIGTERM, [ $this, 'shutDownBySignal' ] );
+			pcntl_signal( SIGINT, [ $this, 'shutDownBySignal' ] );
 		}
 	}
 
 	public function shutDownBySignal( int $signal ) : void
 	{
-		if ( in_array( $signal, [SIGINT, SIGTERM, SIGKILL], true ) )
+		if ( in_array( $signal, [ SIGINT, SIGTERM, SIGKILL ], true ) )
 		{
 			$this->disconnect();
 		}
@@ -219,5 +219,11 @@ final class Client
 	public function stopHandlingMessages() : void
 	{
 		$this->handlingStarted = false;
+	}
+
+	public function pushBackMessage( MessageServerToClient $message ) : void
+	{
+		$this->acknowledgeMessage( $message->getQueueName(), $message->getMessageId() );
+		$this->sendMessage( $message->getQueueName(), $message->getContent() );
 	}
 }
