@@ -65,12 +65,7 @@ final class ClientSocket implements EstablishesStream
 	{
 		if ( !stream_set_blocking( $socket, false ) )
 		{
-			throw new RuntimeException(
-				sprintf(
-					'Could not set server socket at %s to non-blocking.',
-					$this->socketAddress->getSocketAddress()
-				)
-			);
+			throw new RuntimeException( 'Could not set client socket to non-blocking.' );
 		}
 	}
 
