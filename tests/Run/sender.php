@@ -19,12 +19,12 @@ $clientSocket = new ClientSocket(
 $sender    = new Client( $clientSocket );
 $queueName = new QueueName( $argv[1] );
 
-$messageId1 = $sender->sendMessage( $queueName, bin2hex( random_bytes( 256 ) ) );
+$sender->sendMessage( $queueName, bin2hex( random_bytes( 256 ) ) );
 
-echo "√ Sent message 'This is a first test', got message ID: {$messageId1}\n";
+echo "√ Sent message 'This is a first test\n";
 
-$messageId2 = $sender->sendMessage( $queueName, 'This is a second test' );
+$sender->sendMessage( $queueName, 'This is a second test' );
 
-echo "√ Sent message 'This is a second test', got message ID {$messageId2}\n";
+echo "√ Sent message 'This is a second test'";
 
 $sender->disconnect();
